@@ -41,11 +41,11 @@ http://www.crypt.gen.nz/logsurfer/#documentation
 		from_state match_regex not_match_regex stop_regex not_stop_regex to_state timeout [continue] action
 
 
-           The new configuration add two params: from_state and to_state:
+          The new configuration add two params: from_state and to_state:
 
-               from_state: this rule will only enable on this state;
+          from_state: this rule will only enable on this state;
 
-               to_state: when this rule action finished the state will transit to to_state.
+          to_state: when this rule action finished the state will transit to to_state.
 
 	Contexts defination changes:
 
@@ -54,5 +54,5 @@ http://www.crypt.gen.nz/logsurfer/#documentation
 
 	 The new configuration add two params: from_state and to_state:
 
-               to_state: when this rule action finished the state will transit to to_state.
+            to_state: when this rule action finished the state will transit to to_state.
 
