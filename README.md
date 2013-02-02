@@ -40,6 +40,7 @@ http://www.crypt.gen.nz/logsurfer/#documentation
 
 		from_state match_regex not_match_regex stop_regex not_stop_regex to_state timeout [continue] action
 
+
            The new configuration add two params: from_state and to_state:
 
                from_state: this rule will only enable on this state;
