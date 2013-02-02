@@ -1,0 +1,34 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:606: gcc -E conftest.c
+configure:769: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:846: gcc -o conftest -g -O   conftest.c -lgen   1>&5
+configure:840: error: conflicting types for 'main'
+configure:838: note: previous declaration of 'main' was here
+configure:884: gcc -o conftest -g -O   conftest.c  1>&5
+configure:910: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:975: gcc -o conftest -g -O   conftest.c  1>&5
+configure: In function 'main':
+configure:970: warning: incompatible implicit declaration of built-in function 'exit'
+configure:1016: gcc -c -g -O  conftest.c 1>&5
+configure:1050: gcc -c -g -O  conftest.c 1>&5
+configure:1082: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1082: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1082: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1082: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1082: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1082: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1082: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1082: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1193: gcc -c -g -O  conftest.c 1>&5
+configure:1228: gcc -o conftest -g -O   conftest.c  1>&5
+configure:1276: gcc -o conftest -g -O   conftest.c  1>&5
+configure:1459: gcc -o conftest -g -O   conftest.c  1>&5
+configure:1442: warning: conflicting types for built-in function 'strchr'
+configure:1459: gcc -o conftest -g -O   conftest.c  1>&5
+configure:1442: warning: conflicting types for built-in function 'index'
+configure:1459: gcc -o conftest -g -O   conftest.c  1>&5
+configure:1442: warning: conflicting types for built-in function 'memmove'
+configure:1459: gcc -o conftest -g -O   conftest.c  1>&5
+configure:1442: warning: conflicting types for built-in function 'bcopy'
