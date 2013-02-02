@@ -56,3 +56,46 @@ http://www.crypt.gen.nz/logsurfer/#documentation
 
 	 to_state: when this rule action finished the state will transit to to_state.
 
+**State chart in example above**
+
+![state chart](https://raw.github.com/skysbird/logsurfer/master/fsm.png)
+
+
+Log file content like this:
+
+<pre>
+[2013-02-01 15:33:16,262: DEBUG] Incoming msg=(<erl-binary: size=5>, <erl-atom: 'ss@127.0.0.1'>, <erl-binary: size=12>) (k=(), kw={})
+[2013-02-01 15:33:16,263: ERROR] Traceback (most recent call last):
+  File "/home/x/app/mt4client/trunk/process_node.py", line 147, in __TestMBoxCallback
+    process_protocol(data,node,socket_id)
+  File "/home/x/app/mt4client/trunk/process_node.py", line 82, in process_protocol
+    doc = etree.fromstring(data)
+  File "/usr/lib64/python2.6/xml/etree/ElementTree.py", line 963, in XML
+    parser.feed(text)
+  File "/usr/lib64/python2.6/xml/etree/ElementTree.py", line 1245, in feed
+    self._parser.Parse(data, 0)
+ExpatError: syntax error: line 1, column 0
+
+[2013-02-01 15:33:19,299: DEBUG] Incoming msg=(<erl-binary: size=1236>, <erl-atom: 'ss@127.0.0.1'>, <erl-binary: size=11>) (k=(), kw={})
+[2013-02-01 15:33:19,317: DEBUG] **************************update order start******************************
+[2013-02-01 15:33:19,781: DEBUG] Incoming msg=(<erl-binary: size=303>, <erl-atom: 'ss@127.0.0.1'>, <erl-binary: size=11>) (k=(), kw={})
+[2013-02-01 15:33:19,812: DEBUG] Incoming msg=(<erl-binary: size=299>, <erl-atom: 'ss@127.0.0.1'>, <erl-binary: size=11>) (k=(), kw={})
+[2013-02-01 15:33:19,824: INFO] <?xml version="1.0" encoding="UTF-8"?><package uid="2506"><response type="ping" refid="894641" id="130041776018171250"><equity>5089953.01000000</equity><balance>5089953.01000000</balance><margin>0.00000000</margin><freeMargin>5089953.01000000</freeMargin><profit>0.00000000</profit></response></package>
+
+</pre>
+
+Logsurfer will output:
+
+<pre>
+[2013-02-01 15:33:16,263: ERROR] Traceback (most recent call last):
+  File "/home/x/app/mt4client/trunk/process_node.py", line 147, in __TestMBoxCallback
+    process_protocol(data,node,socket_id)
+  File "/home/x/app/mt4client/trunk/process_node.py", line 82, in process_protocol
+    doc = etree.fromstring(data)
+  File "/usr/lib64/python2.6/xml/etree/ElementTree.py", line 963, in XML
+    parser.feed(text)
+  File "/usr/lib64/python2.6/xml/etree/ElementTree.py", line 1245, in feed
+    self._parser.Parse(data, 0)
+ExpatError: syntax error: line 1, column 0
+
+</pre>
